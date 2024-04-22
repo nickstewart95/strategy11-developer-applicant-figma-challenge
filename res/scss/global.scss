@@ -1,6 +1,25 @@
+// Variables
+$font-poppins: "Poppins", sans-serif;
+$font-open:  "Open Sans", sans-serif;
+$font-inter: "Inter", sans-serif;
+
+$black: #000;
+$white: #fff;
+$grey: #E2E8ED;
+$grey-light: #eef3f8;
+$grey-dark: #3F4B5B99;
+$blue: #6786bc;
+
+// Resets
 body {
 	margin: 0;
 	padding: 0;
+	background: $white;
+	font-family: $font-inter;
+}
+
+a {
+	text-decoration: none;
 }
 
 h1,
@@ -11,5 +30,126 @@ h5,
 h6 {
 	margin: 0;
 	padding: 0;
+	font-family: $font-inter;
 	font-weight: normal;
 }
+
+h2 {
+	font-family: $font-poppins;
+}
+
+// Utilities
+.container {
+	margin: 0px auto;
+	width: 80%;
+	max-width: 1290px;
+}
+.btn {
+	padding: 11px 17px;
+	background: $blue;
+	border-radius: 30px;
+	font-family: $font-open;
+	font-size: 14px;
+	color: $white;
+}
+
+// Header
+header {
+	padding-top: 14px;
+	background-color: $grey-light;
+	background-image: url(../img/header.png);
+	background-position: top right;
+	background-size: contain;
+    background-repeat: no-repeat;
+	min-height: 732px;
+
+	h2 {
+		font-size: 64px;
+		font-weight: 600;
+		line-height: 82px;
+	}
+
+	navigation {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 182px;
+
+		.logo img {
+			width: auto;
+			height: 47px;
+		}
+		.btn {
+			margin-left: auto;
+		}
+	}
+
+	form {
+		display: grid;
+		grid-template-columns: 40% 40% 20%;
+		margin-top: 62px;
+		box-shadow: 0px 6px 20px 0px #1725381A;
+
+		input, select {
+			padding: 36px 0px;
+			background: $white;
+			border: 0;
+			appearance: none;
+			font-family: $font-inter;
+			font-size: 20px;
+			text-transform: uppercase;
+			color: $grey-dark;
+		}
+		input[type=text], select {
+			padding-left: 42px;
+		}
+		select {
+			position: relative;
+			z-index: 2;
+			width: 100%;
+			background: transparent;
+			border-left: solid 1px $grey;
+
+			&:valid, &:invalid {
+				color: $grey-dark;
+			}
+		}
+		input[type=submit] {
+			background: $blue;
+			border-radius: 4px;
+			color: $white;
+
+			&:hover {
+				cursor: pointer;
+			}
+		}
+	}
+
+	.select-wrapper {
+		position: relative;
+		background: $white;
+
+		&:after {
+			content: '\203A';
+			position: absolute;
+			top: 0;
+			right: 42px;
+			z-index: 1;
+			transform: rotate(90deg);
+			height: 100%;
+			display: flex;
+			align-items: center;
+			font-size: 26px;
+			color: $black;
+		}
+	}
+
+	> .container {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+	}
+}
+
+// Content

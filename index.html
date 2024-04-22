@@ -1,6 +1,11 @@
 <html>
 	<head>
 		<title>Strategy11 Developer Applicant Figma Challenge</title>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
 		<link
 			rel="stylesheet"
 			href="res/build/global.css"
@@ -8,5 +13,33 @@
 			media="all"
 		/>
 	</head>
-	<body></body>
+	<body>
+		<header>
+			<div class="container">
+				<navigation>
+					<h1 class="logo"><a href="index.html"><img src="res/img/logo.png" alt="Business Directory Plugin"></a></h1>
+					<a class="btn" href="#">Get Business Directory</a>
+				</navigation>
+				<h2>Very Tasty Title<br />About Restaurants<br />And Food</h2>
+				<form>
+					<input
+						class="restaurant"
+						name="restaurant"
+						type="text"
+						placeholder="Restaurant Name"
+					/>
+					<div class="select-wrapper">
+						<select class="location">
+							<option value="all">All Locations</option>
+							<option value="salt-lake">Salt Lake</option>
+						</select>
+					</div>
+					<input type="submit" value="search" />
+				</form>
+			</div>
+		</header>
+		<div class="content">
+			<div class="container"></div>
+		</div>
+	</body>
 </html>

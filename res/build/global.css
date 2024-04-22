@@ -1,6 +1,13 @@
+@charset "UTF-8";
 body {
   margin: 0;
   padding: 0;
+  background: #fff;
+  font-family: "Inter", sans-serif;
+}
+
+a {
+  text-decoration: none;
 }
 
 h1,
@@ -11,5 +18,113 @@ h5,
 h6 {
   margin: 0;
   padding: 0;
+  font-family: "Inter", sans-serif;
   font-weight: normal;
+}
+
+h2 {
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  margin: 0px auto;
+  width: 80%;
+  max-width: 1290px;
+}
+
+.btn {
+  padding: 11px 17px;
+  background: #6786bc;
+  border-radius: 30px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  color: #fff;
+}
+
+header {
+  padding-top: 14px;
+  background-color: #eef3f8;
+  background-image: url(../img/header.png);
+  background-position: top right;
+  background-size: contain;
+  background-repeat: no-repeat;
+  min-height: 732px;
+}
+header h2 {
+  font-size: 64px;
+  font-weight: 600;
+  line-height: 82px;
+}
+header navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 182px;
+}
+header navigation .logo img {
+  width: auto;
+  height: 47px;
+}
+header navigation .btn {
+  margin-left: auto;
+}
+header form {
+  display: grid;
+  grid-template-columns: 40% 40% 20%;
+  margin-top: 62px;
+  box-shadow: 0px 6px 20px 0px rgba(23, 37, 56, 0.1019607843);
+}
+header form input, header form select {
+  padding: 36px 0px;
+  background: #fff;
+  border: 0;
+  appearance: none;
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: rgba(63, 75, 91, 0.6);
+}
+header form input[type=text], header form select {
+  padding-left: 42px;
+}
+header form select {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  background: transparent;
+  border-left: solid 1px #E2E8ED;
+}
+header form select:valid, header form select:invalid {
+  color: rgba(63, 75, 91, 0.6);
+}
+header form input[type=submit] {
+  background: #6786bc;
+  border-radius: 4px;
+  color: #fff;
+}
+header form input[type=submit]:hover {
+  cursor: pointer;
+}
+header .select-wrapper {
+  position: relative;
+  background: #fff;
+}
+header .select-wrapper:after {
+  content: "›";
+  position: absolute;
+  top: 0;
+  right: 42px;
+  z-index: 1;
+  transform: rotate(90deg);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 26px;
+  color: #000;
+}
+header > .container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
