@@ -4,7 +4,7 @@
 
 ## Screenshots
 
-![screenshot](https://raw.githubusercontent.com/nickstewart95/strategy11-developer-applicant-figma-challenge/screenshot.png)
+![screenshot](https://raw.githubusercontent.com/nickstewart95/strategy11-developer-applicant-figma-challenge/main/screenshot.png)
 
 ## Notes
 
