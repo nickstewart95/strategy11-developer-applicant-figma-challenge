@@ -1,14 +1,22 @@
-// Variables
+// Notes 
+// If this was a bigger project, switch over to CSS variables and structure this differently
+// Also implement a spacing system
+
+// Fonts
 $font-poppins: "Poppins", sans-serif;
 $font-open:  "Open Sans", sans-serif;
 $font-inter: "Inter", sans-serif;
 
+// Colors
 $black: #000;
 $white: #fff;
 $grey: #E2E8ED;
 $grey-light: #eef3f8;
 $grey-dark: #3F4B5B99;
 $blue: #6786bc;
+
+// Sizes
+$tablet: 700px;
 
 // Resets
 body {
@@ -67,6 +75,13 @@ header {
 		font-size: 64px;
 		font-weight: 600;
 		line-height: 82px;
+
+		@media (max-width: $tablet) {
+			font-size: 42px;
+			line-height: 1.5;
+			color: $white;
+			text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+		}
 	}
 
 	navigation {
@@ -76,12 +91,21 @@ header {
 		align-items: center;
 		margin-bottom: 182px;
 
+		@media (max-width: $tablet) {
+			flex-direction: column;
+		}
+
 		.logo img {
 			width: auto;
 			height: 47px;
 		}
 		.btn {
 			margin-left: auto;
+
+			@media (max-width: $tablet) {
+				margin-top: 15px;
+				margin-left: 0;
+			}
 		}
 	}
 
@@ -90,6 +114,10 @@ header {
 		grid-template-columns: 40% 40% 20%;
 		margin-top: 62px;
 		box-shadow: 0px 6px 20px 0px #1725381A;
+
+		@media (max-width: $tablet) {
+			grid-template-columns: 1fr;
+		}
 
 		input, select {
 			padding: 36px 0px;
@@ -153,3 +181,84 @@ header {
 }
 
 // Content
+.content {
+	padding: 110px 0;
+
+	.row {
+		display: grid;
+		grid-gap: 30px;
+
+		a {
+			display: block;
+			position: relative;
+			height: 264px;
+			background-color: $blue;
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center;
+			border-radius: 12px;
+		}
+		h3 {
+			font-size: 20px;
+		}
+		h4 {
+			margin-top: 4px;
+			font-size: 14px;
+		}
+
+		.wrapper {
+			position: absolute;
+			left: 26px;
+			bottom: 26px;
+			color: $white;
+		}
+		.add {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			color: $white;
+	
+			svg {
+				margin-bottom: 15px;
+			}
+			span {
+				display: block;
+			}
+		}	
+	}
+	.col-3 {
+		margin-top: 30px;
+		grid-template-columns: 1fr 1fr 1fr;
+
+		@media (max-width: $tablet) {
+			grid-template-columns: 1fr;
+		}
+	}
+	.col-4 {
+		grid-template-columns: 190px 1fr 1fr 190px;
+
+		@media (max-width: $tablet) {
+			grid-template-columns: 1fr;
+		}
+	}
+	.mexican {
+		background-image: url(../img/mexican.png);
+	}
+	.asian {
+		background-image: url(../img/asian.png);
+	}
+	.coffee {
+		background-image: url(../img/coffee.png);
+	}
+	.french {
+		background-image: url(../img/french.png);
+	}
+	.italian {
+		background-image: url(../img/italian.png);
+	}
+	.sweets {
+		background-image: url(../img/sweets.png);
+	}
+}

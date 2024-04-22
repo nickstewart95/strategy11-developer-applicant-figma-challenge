@@ -55,12 +55,25 @@ header h2 {
   font-weight: 600;
   line-height: 82px;
 }
+@media (max-width: 700px) {
+  header h2 {
+    font-size: 42px;
+    line-height: 1.5;
+    color: #fff;
+    text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+  }
+}
 header navigation {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 182px;
+}
+@media (max-width: 700px) {
+  header navigation {
+    flex-direction: column;
+  }
 }
 header navigation .logo img {
   width: auto;
@@ -69,11 +82,22 @@ header navigation .logo img {
 header navigation .btn {
   margin-left: auto;
 }
+@media (max-width: 700px) {
+  header navigation .btn {
+    margin-top: 15px;
+    margin-left: 0;
+  }
+}
 header form {
   display: grid;
   grid-template-columns: 40% 40% 20%;
   margin-top: 62px;
   box-shadow: 0px 6px 20px 0px rgba(23, 37, 56, 0.1019607843);
+}
+@media (max-width: 700px) {
+  header form {
+    grid-template-columns: 1fr;
+  }
 }
 header form input, header form select {
   padding: 36px 0px;
@@ -127,4 +151,84 @@ header > .container {
   display: flex;
   flex-direction: column;
   height: 100%;
+}
+
+.content {
+  padding: 110px 0;
+}
+.content .row {
+  display: grid;
+  grid-gap: 30px;
+}
+.content .row a {
+  display: block;
+  position: relative;
+  height: 264px;
+  background-color: #6786bc;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 12px;
+}
+.content .row h3 {
+  font-size: 20px;
+}
+.content .row h4 {
+  margin-top: 4px;
+  font-size: 14px;
+}
+.content .row .wrapper {
+  position: absolute;
+  left: 26px;
+  bottom: 26px;
+  color: #fff;
+}
+.content .row .add {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+}
+.content .row .add svg {
+  margin-bottom: 15px;
+}
+.content .row .add span {
+  display: block;
+}
+.content .col-3 {
+  margin-top: 30px;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+@media (max-width: 700px) {
+  .content .col-3 {
+    grid-template-columns: 1fr;
+  }
+}
+.content .col-4 {
+  grid-template-columns: 190px 1fr 1fr 190px;
+}
+@media (max-width: 700px) {
+  .content .col-4 {
+    grid-template-columns: 1fr;
+  }
+}
+.content .mexican {
+  background-image: url(../img/mexican.png);
+}
+.content .asian {
+  background-image: url(../img/asian.png);
+}
+.content .coffee {
+  background-image: url(../img/coffee.png);
+}
+.content .french {
+  background-image: url(../img/french.png);
+}
+.content .italian {
+  background-image: url(../img/italian.png);
+}
+.content .sweets {
+  background-image: url(../img/sweets.png);
 }
